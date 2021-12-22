@@ -1,0 +1,117 @@
+/*=================== BASE ===================*/
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: overlay;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+i {
+  font-size: 1.3rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=================== GOOGLE FONTS ===================*/
+/*=================== FONTS ===================*/
+@font-face {
+  font-family: Anurati;
+  src: url(../../fonts/Anurati.otf);
+}
+
+@font-face {
+  font-family: Aquatico;
+  src: url(../../fonts/Aquatico.otf);
+}
+
+@font-face {
+  font-family: Comfortaa;
+  src: url(../../fonts/Comfortaa.ttf);
+}
+
+@font-face {
+  font-family: Glacial Indifference;
+  src: url(../../fonts/GlacialIndifference.otf);
+}
+
+@font-face {
+  font-family: Quicksand;
+  src: url(../../fonts/Quicksand.otf);
+}
+
+/*=================== VARIABLES ===================*/
+/* Z Index */
+/* Others */
+/*=================== LAYOUT ===================*/
+.container {
+  max-width: 1160px;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+@media (min-width: 576px) {
+  .container {
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+}
+
+@media (min-width: 998px) {
+  .container {
+    margin-right: 3rem;
+    margin-left: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+/*=================== REUSEABLE CLASSES ===================*/
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.d-grid {
+  display: -ms-grid;
+  display: grid;
+}
+/*# sourceMappingURL=styles.css.map */

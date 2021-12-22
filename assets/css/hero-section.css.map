@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACE,cADY,CACZ,cAAc,CAAC;EACb,QAAQ,EAAE,KAAK;EACf,GAAG,EAAE,CAAC;CACP",
+    "sources": [
+        "../scss/components/hero-section.scss"
+    ],
+    "names": [],
+    "file": "hero-section.css"
+}

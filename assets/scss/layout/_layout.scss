@@ -1,0 +1,29 @@
+/*=================== LAYOUT ===================*/
+.container {
+  max-width: 1160px;
+  margin-right: $x-1;
+  margin-left: $x-1;
+  @include breakpoint(sm) {
+    margin-right: $x-1-5;
+    margin-left: $x-1-5;
+  }
+  @include breakpoint(md) {
+    margin-right: $x-2;
+    margin-left: $x-2;
+  }
+  @include breakpoint(lg) {
+    margin-right: $x-3;
+    margin-left: $x-3;
+  }
+  @include breakpoint(xl) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+/*=================== REUSEABLE CLASSES ===================*/
+.d-flex {
+  display: flex;
+}
+.d-grid {
+  display: grid;
+}
