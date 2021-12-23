@@ -12,7 +12,10 @@ html {
 body {
   margin: 0;
   padding: 0;
-  overflow: overlay;
+  // overflow: overlay;
+  color: $white-color;
+  overflow: hidden;
+  // font-family: $Glacial-Indifference;
 }
 ul {
   margin: 0;
@@ -21,6 +24,17 @@ ul {
 }
 a {
   text-decoration: none;
+}
+span {
+  display: block;
+}
+button {
+  border: none;
+  outline: none;
+  font-family: $Comfortaa;
+  font-weight: $bold;
+  font-size: $normal-font;
+  cursor: pointer;
 }
 i {
   font-size: 1.3rem;

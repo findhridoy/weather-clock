@@ -1,0 +1,165 @@
+.hero__section {
+  // height: 100vh;
+  // width: 100%;
+  // position: relative;
+  .hero__content {
+    .hero__data {
+      display: flex;
+      gap: 2rem;
+      flex-direction: column;
+      @include breakpoint(sm) {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+      }
+      .hero__quotes {
+        order: 1;
+        @include breakpoint(sm) {
+          order: 0;
+          width: 350px;
+        }
+        .quotes {
+          font-size: $small-font;
+          font-family: $Quicksand;
+          font-weight: $light;
+          @include breakpoint(sm) {
+            font-size: $normal-font;
+          }
+        }
+        .quotes__author {
+          margin-top: $x-0-5;
+          font-size: $normal-font;
+          font-family: $Quicksand;
+          font-weight: $reguler;
+        }
+      }
+      .hero__weather {
+        order: 0;
+        @include breakpoint(sm) {
+          order: 1;
+        }
+      }
+    }
+    .hero__time {
+      margin-top: $x-2;
+      display: flex;
+      flex-direction: column;
+      .time__container {
+        .greetings,
+        .division {
+          font-size: $normal-font;
+          font-family: $Glacial-Indifference;
+          text-transform: uppercase;
+          letter-spacing: 0.1rem;
+          @include breakpoint(xs) {
+            font-size: $small-font;
+          }
+          @include breakpoint(sm) {
+            font-size: 1.2rem;
+          }
+          @include breakpoint(md) {
+            font-size: 1.3rem;
+          }
+        }
+        .division {
+          font-size: 1rem;
+          font-weight: $bold;
+          letter-spacing: 0.2rem;
+          @include breakpoint(xs) {
+            font-size: $normal-font;
+          }
+          @include breakpoint(sm) {
+            font-size: 1.4rem;
+          }
+          @include breakpoint(md) {
+            font-size: 1.5rem;
+          }
+        }
+        .time__data {
+          display: flex;
+          align-items: flex-end;
+          // gap: 0.2rem;
+          margin: $x-0-5 0;
+          .hours,
+          .minutes {
+            font-size: 5rem;
+            font-family: $Glacial-Indifference;
+            font-weight: $bold;
+            letter-spacing: 0.2rem;
+            @include breakpoint(xs) {
+              font-size: 3.5rem;
+            }
+            @include breakpoint(sm) {
+              font-size: 7rem;
+            }
+            @include breakpoint(md) {
+              font-size: 10rem;
+            }
+            @include breakpoint(lg) {
+              font-size: 12rem;
+            }
+          }
+          .seconds {
+            font-size: 3.5rem;
+            font-family: $Glacial-Indifference;
+            margin-bottom: 0.4rem;
+            font-weight: $bold;
+            letter-spacing: 0.2rem;
+            @include breakpoint(xs) {
+              font-size: 2.5rem;
+            }
+            @include breakpoint(sm) {
+              font-size: 4.5rem;
+              margin-bottom: 0.7rem;
+            }
+            @include breakpoint(md) {
+              font-size: 6rem;
+              margin-bottom: 0.9rem;
+            }
+            @include breakpoint(lg) {
+              font-size: 8rem;
+              margin-bottom: 1rem;
+            }
+          }
+          .ampm {
+            font-size: 1.5rem;
+            font-family: $Anurati;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            margin-left: $x-0-5;
+            @include breakpoint(xs) {
+              font-size: 1rem;
+            }
+            @include breakpoint(sm) {
+              font-size: 2rem;
+              margin-bottom: 1.3rem;
+              margin-left: $x-1;
+            }
+            @include breakpoint(md) {
+              font-size: 2.5rem;
+              margin-bottom: 1.8rem;
+              margin-left: $x-2;
+            }
+            @include breakpoint(md) {
+              font-size: 3rem;
+              margin-bottom: 2.2rem;
+              margin-left: $x-3;
+            }
+          }
+        }
+      }
+      .button {
+        margin-top: $x-3;
+        padding: $x-0-5 0;
+        width: 120px;
+        @include breakpoint(sm) {
+          align-self: flex-end;
+          padding: $x-0-75 0;
+        }
+        @include breakpoint(md) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

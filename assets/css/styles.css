@@ -1,5 +1,35 @@
-/*=================== BASE ===================*/
+/*=================== GOOGLE FONTS ===================*/
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap");
+/*=================== FONTS ===================*/
+@font-face {
+  font-family: Anurati;
+  src: url(../../../assets/fonts/Anurati.otf);
+}
+
+@font-face {
+  font-family: Aquatico;
+  src: url(../../../assets/fonts/Aquatico.otf);
+}
+
+@font-face {
+  font-family: Comfortaa;
+  src: url(../../../assets/fonts/Comfortaa.ttf);
+}
+
+@font-face {
+  font-family: Glacial Indifference;
+  src: url(../../../assets/fonts/GlacialIndifference.otf);
+}
+
+@font-face {
+  font-family: Quicksand;
+  src: url(../../../assets/fonts/Quicksand.otf);
+}
+
+/*=================== VARIABLES ===================*/
+/* Z Index */
+/* Others */
+/*=================== BASE ===================*/
 *,
 *::before,
 *::after {
@@ -16,7 +46,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  overflow: overlay;
+  color: white;
+  overflow: hidden;
 }
 
 ul {
@@ -29,6 +60,19 @@ a {
   text-decoration: none;
 }
 
+span {
+  display: block;
+}
+
+button {
+  border: none;
+  outline: none;
+  font-family: "Comfortaa";
+  font-weight: 700;
+  font-size: 0.938rem;
+  cursor: pointer;
+}
+
 i {
   font-size: 1.3rem;
 }
@@ -38,36 +82,6 @@ img {
   height: auto;
 }
 
-/*=================== GOOGLE FONTS ===================*/
-/*=================== FONTS ===================*/
-@font-face {
-  font-family: Anurati;
-  src: url(../../fonts/Anurati.otf);
-}
-
-@font-face {
-  font-family: Aquatico;
-  src: url(../../fonts/Aquatico.otf);
-}
-
-@font-face {
-  font-family: Comfortaa;
-  src: url(../../fonts/Comfortaa.ttf);
-}
-
-@font-face {
-  font-family: Glacial Indifference;
-  src: url(../../fonts/GlacialIndifference.otf);
-}
-
-@font-face {
-  font-family: Quicksand;
-  src: url(../../fonts/Quicksand.otf);
-}
-
-/*=================== VARIABLES ===================*/
-/* Z Index */
-/* Others */
 /*=================== LAYOUT ===================*/
 .container {
   max-width: 1160px;
@@ -104,14 +118,467 @@ img {
 }
 
 /*=================== REUSEABLE CLASSES ===================*/
-.d-flex {
+main {
+  width: 100%;
+  height: 100vh;
+}
+
+main .main__bg {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+
+main .hero__section {
+  margin-top: 0;
+  height: 100vh;
+  -webkit-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
+}
+
+main .transform-hero {
+  margin-top: -260px;
+}
+
+main .details__section {
+  position: absolute;
+  width: 100%;
+  bottom: -50%;
+  -webkit-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
+}
+
+main .transform-details {
+  bottom: 0;
+}
+
+section {
+  padding: 2rem 0;
+}
+
+.weather__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.d-grid {
-  display: -ms-grid;
-  display: grid;
+.weather__container .weather__icon {
+  width: 80px;
+}
+
+.weather__container .weather__degree {
+  font-size: 2rem;
+  font-family: "Comfortaa";
+}
+
+.weather__location,
+.weather__mood,
+.weather__feels--like {
+  font-family: "Comfortaa";
+  font-size: 0.813rem;
+  opacity: 0.8;
+}
+
+.weather__mood {
+  font-size: 0.938rem;
+  opacity: 1;
+  margin: 0.25rem 0;
+}
+
+.hero__section .hero__content .hero__data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 576px) {
+  .hero__section .hero__content .hero__data {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 0;
+  }
+}
+
+.hero__section .hero__content .hero__data .hero__quotes {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+@media (min-width: 576px) {
+  .hero__section .hero__content .hero__data .hero__quotes {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    width: 350px;
+  }
+}
+
+.hero__section .hero__content .hero__data .hero__quotes .quotes {
+  font-size: 0.813rem;
+  font-family: "Quicksand";
+  font-weight: 100;
+}
+
+@media (min-width: 576px) {
+  .hero__section .hero__content .hero__data .hero__quotes .quotes {
+    font-size: 0.938rem;
+  }
+}
+
+.hero__section .hero__content .hero__data .hero__quotes .quotes__author {
+  margin-top: 0.5rem;
+  font-size: 0.938rem;
+  font-family: "Quicksand";
+  font-weight: 400;
+}
+
+.hero__section .hero__content .hero__data .hero__weather {
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+}
+
+@media (min-width: 576px) {
+  .hero__section .hero__content .hero__data .hero__weather {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+.hero__section .hero__content .hero__time {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero__section .hero__content .hero__time .time__container .greetings,
+.hero__section .hero__content .hero__time .time__container .division {
+  font-size: 0.938rem;
+  font-family: "Glacial Indifference";
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+@media (max-width: 340px) {
+  .hero__section .hero__content .hero__time .time__container .greetings,
+  .hero__section .hero__content .hero__time .time__container .division {
+    font-size: 0.813rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .hero__section .hero__content .hero__time .time__container .greetings,
+  .hero__section .hero__content .hero__time .time__container .division {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__section .hero__content .hero__time .time__container .greetings,
+  .hero__section .hero__content .hero__time .time__container .division {
+    font-size: 1.3rem;
+  }
+}
+
+.hero__section .hero__content .hero__time .time__container .division {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+@media (max-width: 340px) {
+  .hero__section .hero__content .hero__time .time__container .division {
+    font-size: 0.938rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .hero__section .hero__content .hero__time .time__container .division {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__section .hero__content .hero__time .time__container .division {
+    font-size: 1.5rem;
+  }
+}
+
+.hero__section .hero__content .hero__time .time__container .time__data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 0.5rem 0;
+}
+
+.hero__section .hero__content .hero__time .time__container .time__data .hours,
+.hero__section .hero__content .hero__time .time__container .time__data .minutes {
+  font-size: 5rem;
+  font-family: "Glacial Indifference";
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+@media (max-width: 340px) {
+  .hero__section .hero__content .hero__time .time__container .time__data .hours,
+  .hero__section .hero__content .hero__time .time__container .time__data .minutes {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .hero__section .hero__content .hero__time .time__container .time__data .hours,
+  .hero__section .hero__content .hero__time .time__container .time__data .minutes {
+    font-size: 7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__section .hero__content .hero__time .time__container .time__data .hours,
+  .hero__section .hero__content .hero__time .time__container .time__data .minutes {
+    font-size: 10rem;
+  }
+}
+
+@media (min-width: 998px) {
+  .hero__section .hero__content .hero__time .time__container .time__data .hours,
+  .hero__section .hero__content .hero__time .time__container .time__data .minutes {
+    font-size: 12rem;
+  }
+}
+
+.hero__section .hero__content .hero__time .time__container .time__data .seconds {
+  font-size: 3.5rem;
+  font-family: "Glacial Indifference";
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+@media (max-width: 340px) {
+  .hero__section .hero__content .hero__time .time__container .time__data .seconds {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .hero__section .hero__content .hero__time .time__container .time__data .seconds {
+    font-size: 4.5rem;
+    margin-bottom: 0.7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__section .hero__content .hero__time .time__container .time__data .seconds {
+    font-size: 6rem;
+    margin-bottom: 0.9rem;
+  }
+}
+
+@media (min-width: 998px) {
+  .hero__section .hero__content .hero__time .time__container .time__data .seconds {
+    font-size: 8rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.hero__section .hero__content .hero__time .time__container .time__data .ampm {
+  font-size: 1.5rem;
+  font-family: "Anurati";
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 340px) {
+  .hero__section .hero__content .hero__time .time__container .time__data .ampm {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .hero__section .hero__content .hero__time .time__container .time__data .ampm {
+    font-size: 2rem;
+    margin-bottom: 1.3rem;
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__section .hero__content .hero__time .time__container .time__data .ampm {
+    font-size: 2.5rem;
+    margin-bottom: 1.8rem;
+    margin-left: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__section .hero__content .hero__time .time__container .time__data .ampm {
+    font-size: 3rem;
+    margin-bottom: 2.2rem;
+    margin-left: 3rem;
+  }
+}
+
+.hero__section .hero__content .hero__time .button {
+  margin-top: 3rem;
+  padding: 0.5rem 0;
+  width: 120px;
+}
+
+@media (min-width: 576px) {
+  .hero__section .hero__content .hero__time .button {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    padding: 0.75rem 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__section .hero__content .hero__time .button {
+    margin-top: 0;
+  }
+}
+
+.details__section {
+  background-color: #ededed;
+  color: #0b1e28;
+}
+
+.details__section .details__data .details__date {
+  font-size: 5rem;
+  font-family: "Quicksand";
+  font-weight: 700;
+}
+
+.details__section .details__data .details__month {
+  font-size: 1.2rem;
+  font-family: "Comfortaa";
+  font-weight: 700;
+}
+
+.details__section .details__data .details__day {
+  font-size: 0.813rem;
+  font-family: "Comfortaa";
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.details__section .details__data .details__timezone {
+  font-size: 1.3rem;
+  font-family: "Quicksand";
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-top: 1rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 340px) {
+  .details__section .details__data .details__timezone {
+    font-size: 1rem;
+  }
+}
+
+.details__section .details__data .details__timezone--text {
+  font-size: 2.5rem;
+  font-family: "Quicksand";
+  font-weight: 700;
+}
+
+.details__section .details__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 576px) {
+  .details__section .details__content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 0;
+  }
+}
+
+.details__section .details__content .details__weather {
+  width: 208px;
+}
+
+.details__section .details__content .details__weather .weather__container .weather__icon {
+  width: 100px;
+}
+
+.details__section .details__content .details__weather .weather__container .weather__degree {
+  font-size: 2.5rem;
+  font-family: "Comfortaa";
+}
+
+.details__section .details__content .details__weather .weather__day--night {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.details__section .details__content .details__weather .weather__day--night .weather__night .night__text,
+.details__section .details__content .details__weather .weather__day--night .weather__night .day__text,
+.details__section .details__content .details__weather .weather__day--night .weather__day .night__text,
+.details__section .details__content .details__weather .weather__day--night .weather__day .day__text {
+  font-size: 0.813rem;
+  font-family: "Comfortaa";
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.details__section .details__content .details__weather .weather__day--night .weather__night .night__degree,
+.details__section .details__content .details__weather .weather__day--night .weather__night .day__degree,
+.details__section .details__content .details__weather .weather__day--night .weather__day .night__degree,
+.details__section .details__content .details__weather .weather__day--night .weather__day .day__degree {
+  font-size: 0.938rem;
+  font-family: "Comfortaa";
+  font-weight: 700;
+  margin-top: 0.25rem;
 }
 /*# sourceMappingURL=styles.css.map */
