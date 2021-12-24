@@ -118,11 +118,6 @@ img {
 }
 
 /*=================== REUSEABLE CLASSES ===================*/
-main {
-  width: 100%;
-  height: 100vh;
-}
-
 main .main__bg {
   position: fixed;
   top: 0;
@@ -131,29 +126,6 @@ main .main__bg {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -1;
-}
-
-main .hero__section {
-  margin-top: 0;
-  height: 100vh;
-  -webkit-transition: all 300ms ease-in;
-  transition: all 300ms ease-in;
-}
-
-main .transform-hero {
-  margin-top: -260px;
-}
-
-main .details__section {
-  position: absolute;
-  width: 100%;
-  bottom: -50%;
-  -webkit-transition: all 300ms ease-in;
-  transition: all 300ms ease-in;
-}
-
-main .transform-details {
-  bottom: 0;
 }
 
 section {
@@ -175,9 +147,22 @@ section {
   width: 80px;
 }
 
-.weather__container .weather__degree {
+.weather__container .weather__temperature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.weather__container .weather__temperature .temperature,
+.weather__container .weather__temperature .degree,
+.weather__container .weather__temperature .fahrenheit {
   font-size: 2rem;
   font-family: "Comfortaa";
+}
+
+.weather__container .weather__temperature .fahrenheit {
+  margin-left: 0.75rem;
 }
 
 .weather__location,
@@ -192,6 +177,13 @@ section {
   font-size: 0.938rem;
   opacity: 1;
   margin: 0.25rem 0;
+}
+
+.hero__section {
+  margin-top: 0;
+  height: 100vh;
+  -webkit-transition: all 400ms ease-out;
+  transition: all 400ms ease-out;
 }
 
 .hero__section .hero__content .hero__data {
@@ -338,6 +330,7 @@ section {
       -ms-flex-align: end;
           align-items: flex-end;
   margin: 0.5rem 0;
+  position: relative;
 }
 
 .hero__section .hero__content .hero__time .time__container .time__data .hours,
@@ -415,37 +408,39 @@ section {
   font-size: 1.5rem;
   font-family: "Anurati";
   text-transform: uppercase;
-  margin-bottom: 1rem;
-  margin-left: 0.5rem;
+  position: absolute;
+  left: 300px;
+  bottom: 14px;
 }
 
 @media (max-width: 340px) {
   .hero__section .hero__content .hero__time .time__container .time__data .ampm {
     font-size: 1rem;
+    left: 220px;
   }
 }
 
 @media (min-width: 576px) {
   .hero__section .hero__content .hero__time .time__container .time__data .ampm {
     font-size: 2rem;
-    margin-bottom: 1.3rem;
-    margin-left: 1rem;
+    left: 400px;
+    bottom: 20px;
   }
 }
 
 @media (min-width: 768px) {
   .hero__section .hero__content .hero__time .time__container .time__data .ampm {
     font-size: 2.5rem;
-    margin-bottom: 1.8rem;
-    margin-left: 2rem;
+    left: 550px;
+    bottom: 28px;
   }
 }
 
 @media (min-width: 768px) {
   .hero__section .hero__content .hero__time .time__container .time__data .ampm {
     font-size: 3rem;
-    margin-bottom: 2.2rem;
-    margin-left: 3rem;
+    left: 670px;
+    bottom: 35px;
   }
 }
 
@@ -469,9 +464,126 @@ section {
   }
 }
 
+.hero__section .hero__content .hero__time .hero__arrow--button {
+  margin-top: 3rem;
+}
+
+@media (min-width: 576px) {
+  .hero__section .hero__content .hero__time .hero__arrow--button {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    padding: 0.75rem 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__section .hero__content .hero__time .hero__arrow--button {
+    margin-top: 0;
+  }
+}
+
+.hero__section .hero__content .hero__time .hero__arrow--button .arrow__wrapper {
+  width: 130px;
+  height: 40px;
+  background-color: #ededed;
+  color: #0b1e28;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.hero__section .hero__content .hero__time .hero__arrow--button .arrow__wrapper .arrow__button--text {
+  font-family: "Comfortaa";
+  font-weight: 700;
+  font-size: 0.938rem;
+}
+
+.hero__section .hero__content .hero__time .hero__arrow--button .arrow__wrapper .arrow__button {
+  height: 2.5px;
+  width: 25px;
+  border-radius: 6px;
+  background-color: #0b1e28;
+  position: relative;
+  -webkit-transform: translateY(-50%) rotate(90deg);
+          transform: translateY(-50%) rotate(90deg);
+  -webkit-transition: all 900ms ease-in-out;
+  transition: all 900ms ease-in-out;
+}
+
+.hero__section .hero__content .hero__time .hero__arrow--button .arrow__wrapper .arrow__button::before, .hero__section .hero__content .hero__time .hero__arrow--button .arrow__wrapper .arrow__button::after {
+  content: "";
+  height: 100%;
+  width: 15px;
+  position: absolute;
+  background-color: #0b1e28;
+  left: 11px;
+  border-radius: 6px;
+  -webkit-transition: all 900ms ease-in-out;
+  transition: all 900ms ease-in-out;
+}
+
+.hero__section .hero__content .hero__time .hero__arrow--button .arrow__wrapper .arrow__button::before {
+  -webkit-transform: translateY(-5px) rotate(40deg);
+          transform: translateY(-5px) rotate(40deg);
+}
+
+.hero__section .hero__content .hero__time .hero__arrow--button .arrow__wrapper .arrow__button::after {
+  -webkit-transform: translateY(5px) rotate(-40deg);
+          transform: translateY(5px) rotate(-40deg);
+}
+
+.hero__section .hero__content .hero__time .hero__arrow--button .active--button .arrow__button::before, .hero__section .hero__content .hero__time .hero__arrow--button .active--button .arrow__button::after {
+  left: -1px;
+}
+
+.hero__section .hero__content .hero__time .hero__arrow--button .active--button .arrow__button::before {
+  -webkit-transform: translateY(-5px) rotate(-40deg);
+          transform: translateY(-5px) rotate(-40deg);
+}
+
+.hero__section .hero__content .hero__time .hero__arrow--button .active--button .arrow__button::after {
+  -webkit-transform: translateY(5px) rotate(40deg);
+          transform: translateY(5px) rotate(40deg);
+}
+
+.transform-hero {
+  margin-top: -450px;
+}
+
+@media (max-width: 340px) {
+  .transform-hero {
+    margin-top: -440px;
+  }
+}
+
+@media (min-width: 576px) {
+  .transform-hero {
+    margin-top: -260px;
+  }
+}
+
 .details__section {
   background-color: #ededed;
   color: #0b1e28;
+  position: absolute;
+  width: 100%;
+  bottom: -90%;
+  -webkit-transition: all 400ms ease-out;
+  transition: all 400ms ease-out;
+}
+
+@media (min-width: 576px) {
+  .details__section {
+    bottom: -50%;
+  }
 }
 
 .details__section .details__data .details__date {
@@ -580,5 +692,9 @@ section {
   font-family: "Comfortaa";
   font-weight: 700;
   margin-top: 0.25rem;
+}
+
+.transform-details {
+  bottom: 0;
 }
 /*# sourceMappingURL=styles.css.map */

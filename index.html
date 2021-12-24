@@ -25,13 +25,22 @@
               </div>
               <div class="hero__weather">
                 <div class="weather__container">
-                  <img
+                  <!-- <img
                     src="assets/images/partly_cloudy_day.png"
                     alt="weather icon"
                     class="weather__icon"
-                  />
+                  /> -->
+                  <canvas
+                    class="weather__icon"
+                    width="128"
+                    height="128"
+                  ></canvas>
 
-                  <span class="weather__degree">26°C</span>
+                  <span class="weather__temperature">
+                    <span class="temperature">26</span>
+                    <span class="degree">&deg</span>
+                    <span class="fahrenheit">F</span>
+                  </span>
                 </div>
                 <span class="weather__location">Dhaka</span>
                 <span class="weather__mood">Partly Cloudy</span>
@@ -41,15 +50,21 @@
             <!-- Hero Time -->
             <div class="hero__time">
               <div class="time__container">
-                <span class="greetings">Good Morning, It's Currently</span>
+                <span class="greetings"></span>
                 <div class="time__data">
-                  <span class="hours">12:44</span>
+                  <span class="hours">12</span>
+                  <span class="minutes">:44</span>
                   <span class="seconds">:13</span>
                   <span class="ampm">pm</span>
                 </div>
                 <span class="division">In Dhaka Division, BD</span>
               </div>
-              <button class="button">More</button>
+              <div class="hero__arrow--button">
+                <div class="arrow__wrapper">
+                  <span class="arrow__button--text">More</span>
+                  <!-- <div class="arrow__button"></div> -->
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -95,10 +110,12 @@
         </div>
       </section>
       <!-- Details Section End -->
-      <img src="assets/images/night.jpg" alt="BG Image" class="main__bg" />
+      <img src="" alt="BG Image" class="main__bg" />
     </main>
 
     <!-- JS File -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="assets/js/skycons.js"></script>
     <script src="assets/js/requestAPI.js"></script>
     <script src="assets/js/main.js"></script>
   </body>

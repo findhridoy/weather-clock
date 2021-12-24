@@ -71,6 +71,7 @@ $z-999: 999;
 
 /* Others */
 $hidden: hidden;
-$trans-ease: all 300ms ease-in;
-$trans-cubic: 500ms cubic-bezier(0.77, 0.2, 0.05, 1);
+$trans-ease: all 400ms ease-out;
+$trans-ease-in-out: all 900ms ease-in-out;
+$trans-cubic: 1000ms cubic-bezier(0.77, 0.2, 0.05, 1);
 $header-height: 4rem;

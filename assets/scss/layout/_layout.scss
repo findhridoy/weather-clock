@@ -22,9 +22,6 @@
 }
 /*=================== REUSEABLE CLASSES ===================*/
 main {
-  // overflow: hidden;
-  width: 100%;
-  height: 100vh;
   .main__bg {
     position: fixed;
     top: 0;
@@ -32,23 +29,6 @@ main {
     height: 100vh;
     object-fit: cover;
     z-index: -1;
-  }
-  .hero__section {
-    margin-top: 0;
-    height: 100vh;
-    transition: $trans-ease;
-  }
-  .transform-hero {
-    margin-top: -260px;
-  }
-  .details__section {
-    position: absolute;
-    width: 100%;
-    bottom: -50%;
-    transition: $trans-ease;
-  }
-  .transform-details {
-    bottom: 0;
   }
 }
 section {
@@ -62,9 +42,18 @@ section {
   .weather__icon {
     width: 80px;
   }
-  .weather__degree {
-    font-size: $biggest-font;
-    font-family: $Comfortaa;
+  .weather__temperature {
+    display: flex;
+    cursor: pointer;
+    .temperature,
+    .degree,
+    .fahrenheit {
+      font-size: $biggest-font;
+      font-family: $Comfortaa;
+    }
+    .fahrenheit {
+      margin-left: $x-0-75;
+    }
   }
 }
 .weather__location,
