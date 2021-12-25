@@ -143,14 +143,14 @@ const getWeather = async (lat, long) => {
 
     temp.innerText = Math.floor(temperature);
 
-    //Fahrenheit to Celcias Forumula
-    let celcias = Math.floor((temperature - 32) * (5 / 9));
+    //Fahrenheit to Celsias Forumula
+    let celsias = Math.floor((temperature - 32) * (5 / 9));
 
-    //Temperature convert to Celcias
+    //Temperature convert to Celsias
     weatherTemp.addEventListener("click", () => {
       if (fahrenheit.innerText === "F") {
         fahrenheit.innerText = "C";
-        temp.innerText = celcias;
+        temp.innerText = celsias;
       } else {
         fahrenheit.innerText = "F";
         temp.innerText = Math.floor(temperature);
@@ -159,7 +159,7 @@ const getWeather = async (lat, long) => {
 
     weatherTimezone.innerText = data.timezone;
     weatherSummery.innerText = summary;
-    weatherFeels.innerText = `Feels Like ${celcias}° C`;
+    weatherFeels.innerText = `Feels Like ${celsias}° C`;
     weatherLowTemp.innerText = Math.floor(temperatureLow) + "° F";
     weatherHighTemp.innerText = Math.floor(temperatureHigh) + "° F";
     setIcons(icon, weatherIcon);
