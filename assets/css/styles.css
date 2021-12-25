@@ -39,42 +39,14 @@
           box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
   padding: 0;
   color: white;
-  overflow: hidden;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
 }
 
 span {
   display: block;
-}
-
-button {
-  border: none;
-  outline: none;
-  font-family: "Comfortaa";
-  font-weight: 700;
-  font-size: 0.938rem;
-  cursor: pointer;
-}
-
-i {
-  font-size: 1.3rem;
 }
 
 img {
@@ -132,65 +104,11 @@ section {
   padding: 2rem 0;
 }
 
-.weather__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.weather__container .weather__icon {
-  width: 80px;
-}
-
-.weather__container .weather__temperature {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-}
-
-.weather__container .weather__temperature .temperature,
-.weather__container .weather__temperature .degree,
-.weather__container .weather__temperature .fahrenheit {
-  font-size: 2rem;
-  font-family: "Comfortaa";
-}
-
-.weather__container .weather__temperature .fahrenheit {
-  margin-left: 0.75rem;
-}
-
-.weather__location,
-.weather__mood,
-.weather__feels--like {
-  font-family: "Comfortaa";
-  font-size: 0.813rem;
-  opacity: 0.8;
-}
-
-.weather__mood {
-  font-size: 0.938rem;
-  opacity: 1;
-  margin: 0.25rem 0;
-}
-
-.hero__section {
-  margin-top: 0;
-  height: 100vh;
-  -webkit-transition: all 400ms ease-out;
-  transition: all 400ms ease-out;
-}
-
 .hero__section .hero__content .hero__data {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -221,7 +139,7 @@ section {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
-    width: 350px;
+    width: 21.875rem;
   }
 }
 
@@ -248,6 +166,7 @@ section {
   -webkit-box-ordinal-group: 1;
       -ms-flex-order: 0;
           order: 0;
+  width: 11.25rem;
 }
 
 @media (min-width: 576px) {
@@ -258,413 +177,50 @@ section {
   }
 }
 
-.hero__section .hero__content .hero__time {
-  margin-top: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.hero__section .hero__content .hero__time .time__container .greetings,
-.hero__section .hero__content .hero__time .time__container .division {
-  font-size: 0.938rem;
-  font-family: "Glacial Indifference";
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-}
-
-@media (max-width: 340px) {
-  .hero__section .hero__content .hero__time .time__container .greetings,
-  .hero__section .hero__content .hero__time .time__container .division {
-    font-size: 0.813rem;
-  }
-}
-
-@media (min-width: 576px) {
-  .hero__section .hero__content .hero__time .time__container .greetings,
-  .hero__section .hero__content .hero__time .time__container .division {
-    font-size: 1.2rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .hero__section .hero__content .hero__time .time__container .greetings,
-  .hero__section .hero__content .hero__time .time__container .division {
-    font-size: 1.3rem;
-  }
-}
-
-.hero__section .hero__content .hero__time .time__container .division {
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.2rem;
-}
-
-@media (max-width: 340px) {
-  .hero__section .hero__content .hero__time .time__container .division {
-    font-size: 0.938rem;
-  }
-}
-
-@media (min-width: 576px) {
-  .hero__section .hero__content .hero__time .time__container .division {
-    font-size: 1.4rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .hero__section .hero__content .hero__time .time__container .division {
-    font-size: 1.5rem;
-  }
-}
-
-.hero__section .hero__content .hero__time .time__container .time__data {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  margin: 0.5rem 0;
-  position: relative;
-}
-
-.hero__section .hero__content .hero__time .time__container .time__data .hours,
-.hero__section .hero__content .hero__time .time__container .time__data .minutes {
-  font-size: 5rem;
-  font-family: "Glacial Indifference";
-  font-weight: 700;
-  letter-spacing: 0.2rem;
-}
-
-@media (max-width: 340px) {
-  .hero__section .hero__content .hero__time .time__container .time__data .hours,
-  .hero__section .hero__content .hero__time .time__container .time__data .minutes {
-    font-size: 3.5rem;
-  }
-}
-
-@media (min-width: 576px) {
-  .hero__section .hero__content .hero__time .time__container .time__data .hours,
-  .hero__section .hero__content .hero__time .time__container .time__data .minutes {
-    font-size: 7rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .hero__section .hero__content .hero__time .time__container .time__data .hours,
-  .hero__section .hero__content .hero__time .time__container .time__data .minutes {
-    font-size: 10rem;
-  }
-}
-
-@media (min-width: 998px) {
-  .hero__section .hero__content .hero__time .time__container .time__data .hours,
-  .hero__section .hero__content .hero__time .time__container .time__data .minutes {
-    font-size: 12rem;
-  }
-}
-
-.hero__section .hero__content .hero__time .time__container .time__data .seconds {
-  font-size: 3.5rem;
-  font-family: "Glacial Indifference";
-  margin-bottom: 0.4rem;
-  font-weight: 700;
-  letter-spacing: 0.2rem;
-}
-
-@media (max-width: 340px) {
-  .hero__section .hero__content .hero__time .time__container .time__data .seconds {
-    font-size: 2.5rem;
-  }
-}
-
-@media (min-width: 576px) {
-  .hero__section .hero__content .hero__time .time__container .time__data .seconds {
-    font-size: 4.5rem;
-    margin-bottom: 0.7rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .hero__section .hero__content .hero__time .time__container .time__data .seconds {
-    font-size: 6rem;
-    margin-bottom: 0.9rem;
-  }
-}
-
-@media (min-width: 998px) {
-  .hero__section .hero__content .hero__time .time__container .time__data .seconds {
-    font-size: 8rem;
-    margin-bottom: 1rem;
-  }
-}
-
-.hero__section .hero__content .hero__time .time__container .time__data .ampm {
-  font-size: 1.5rem;
-  font-family: "Anurati";
-  text-transform: uppercase;
-  position: absolute;
-  left: 300px;
-  bottom: 14px;
-}
-
-@media (max-width: 340px) {
-  .hero__section .hero__content .hero__time .time__container .time__data .ampm {
-    font-size: 1rem;
-    left: 220px;
-  }
-}
-
-@media (min-width: 576px) {
-  .hero__section .hero__content .hero__time .time__container .time__data .ampm {
-    font-size: 2rem;
-    left: 400px;
-    bottom: 20px;
-  }
-}
-
-@media (min-width: 768px) {
-  .hero__section .hero__content .hero__time .time__container .time__data .ampm {
-    font-size: 2.5rem;
-    left: 550px;
-    bottom: 28px;
-  }
-}
-
-@media (min-width: 768px) {
-  .hero__section .hero__content .hero__time .time__container .time__data .ampm {
-    font-size: 3rem;
-    left: 670px;
-    bottom: 35px;
-  }
-}
-
-.hero__section .hero__content .hero__time .button {
-  margin-top: 3rem;
-  padding: 0.5rem 0;
-  width: 120px;
-}
-
-@media (min-width: 576px) {
-  .hero__section .hero__content .hero__time .button {
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    padding: 0.75rem 0;
-  }
-}
-
-@media (min-width: 768px) {
-  .hero__section .hero__content .hero__time .button {
-    margin-top: 0;
-  }
-}
-
-.hero__section .hero__content .hero__time .hero__arrow--button {
-  margin-top: 3rem;
-}
-
-@media (min-width: 576px) {
-  .hero__section .hero__content .hero__time .hero__arrow--button {
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    padding: 0.75rem 0;
-  }
-}
-
-@media (min-width: 768px) {
-  .hero__section .hero__content .hero__time .hero__arrow--button {
-    margin-top: 0;
-  }
-}
-
-.hero__section .hero__content .hero__time .hero__arrow--button .arrow__wrapper {
-  width: 130px;
-  height: 40px;
-  background-color: #ededed;
-  color: #0b1e28;
+.hero__section .hero__content .hero__data .hero__weather .weather__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 1rem;
-  cursor: pointer;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.hero__section .hero__content .hero__time .hero__arrow--button .arrow__wrapper .arrow__button--text {
-  font-family: "Comfortaa";
-  font-weight: 700;
-  font-size: 0.938rem;
-}
-
-.hero__section .hero__content .hero__time .hero__arrow--button .arrow__wrapper .arrow__button {
-  height: 2.5px;
-  width: 25px;
-  border-radius: 6px;
-  background-color: #0b1e28;
-  position: relative;
-  -webkit-transform: translateY(-50%) rotate(90deg);
-          transform: translateY(-50%) rotate(90deg);
-  -webkit-transition: all 900ms ease-in-out;
-  transition: all 900ms ease-in-out;
-}
-
-.hero__section .hero__content .hero__time .hero__arrow--button .arrow__wrapper .arrow__button::before, .hero__section .hero__content .hero__time .hero__arrow--button .arrow__wrapper .arrow__button::after {
-  content: "";
-  height: 100%;
-  width: 15px;
-  position: absolute;
-  background-color: #0b1e28;
-  left: 11px;
-  border-radius: 6px;
-  -webkit-transition: all 900ms ease-in-out;
-  transition: all 900ms ease-in-out;
-}
-
-.hero__section .hero__content .hero__time .hero__arrow--button .arrow__wrapper .arrow__button::before {
-  -webkit-transform: translateY(-5px) rotate(40deg);
-          transform: translateY(-5px) rotate(40deg);
-}
-
-.hero__section .hero__content .hero__time .hero__arrow--button .arrow__wrapper .arrow__button::after {
-  -webkit-transform: translateY(5px) rotate(-40deg);
-          transform: translateY(5px) rotate(-40deg);
-}
-
-.hero__section .hero__content .hero__time .hero__arrow--button .active--button .arrow__button::before, .hero__section .hero__content .hero__time .hero__arrow--button .active--button .arrow__button::after {
-  left: -1px;
-}
-
-.hero__section .hero__content .hero__time .hero__arrow--button .active--button .arrow__button::before {
-  -webkit-transform: translateY(-5px) rotate(-40deg);
-          transform: translateY(-5px) rotate(-40deg);
-}
-
-.hero__section .hero__content .hero__time .hero__arrow--button .active--button .arrow__button::after {
-  -webkit-transform: translateY(5px) rotate(40deg);
-          transform: translateY(5px) rotate(40deg);
-}
-
-.transform-hero {
-  margin-top: -450px;
-}
-
-@media (max-width: 340px) {
-  .transform-hero {
-    margin-top: -440px;
-  }
-}
-
-@media (min-width: 576px) {
-  .transform-hero {
-    margin-top: -260px;
-  }
-}
-
-.details__section {
-  background-color: #ededed;
-  color: #0b1e28;
-  position: absolute;
-  width: 100%;
-  bottom: -90%;
-  -webkit-transition: all 400ms ease-out;
-  transition: all 400ms ease-out;
-}
-
-@media (min-width: 576px) {
-  .details__section {
-    bottom: -50%;
-  }
-}
-
-.details__section .details__data .details__date {
-  font-size: 5rem;
-  font-family: "Quicksand";
-  font-weight: 700;
-}
-
-.details__section .details__data .details__month {
-  font-size: 1.2rem;
-  font-family: "Comfortaa";
-  font-weight: 700;
-}
-
-.details__section .details__data .details__day {
-  font-size: 0.813rem;
-  font-family: "Comfortaa";
-  font-weight: 700;
-  opacity: 0.7;
-}
-
-.details__section .details__data .details__timezone {
-  font-size: 1.3rem;
-  font-family: "Quicksand";
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  margin-top: 1rem;
-  opacity: 0.7;
-}
-
-@media (max-width: 340px) {
-  .details__section .details__data .details__timezone {
-    font-size: 1rem;
-  }
-}
-
-.details__section .details__data .details__timezone--text {
-  font-size: 2.5rem;
-  font-family: "Quicksand";
-  font-weight: 700;
-}
-
-.details__section .details__content {
+.hero__section .hero__content .hero__data .hero__weather .weather__container .weather__temperature {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 2rem;
+  cursor: pointer;
 }
 
-@media (min-width: 576px) {
-  .details__section .details__content {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    gap: 0;
-  }
-}
-
-.details__section .details__content .details__weather {
-  width: 208px;
-}
-
-.details__section .details__content .details__weather .weather__container .weather__icon {
-  width: 100px;
-}
-
-.details__section .details__content .details__weather .weather__container .weather__degree {
-  font-size: 2.5rem;
+.hero__section .hero__content .hero__data .hero__weather .weather__container .weather__temperature .temperature,
+.hero__section .hero__content .hero__data .hero__weather .weather__container .weather__temperature .degree,
+.hero__section .hero__content .hero__data .hero__weather .weather__container .weather__temperature .fahrenheit {
+  font-size: 2rem;
   font-family: "Comfortaa";
 }
 
-.details__section .details__content .details__weather .weather__day--night {
+.hero__section .hero__content .hero__data .hero__weather .weather__container .weather__temperature .fahrenheit {
+  margin-left: 0.75rem;
+}
+
+.hero__section .hero__content .hero__data .hero__weather .weather__timezone,
+.hero__section .hero__content .hero__data .hero__weather .weather__summery,
+.hero__section .hero__content .hero__data .hero__weather .weather__feels--like {
+  font-family: "Comfortaa";
+  font-size: 0.813rem;
+  opacity: 0.8;
+}
+
+.hero__section .hero__content .hero__data .hero__weather .weather__summery {
+  font-size: 0.938rem;
+  opacity: 1;
+  margin: 0.25rem 0;
+}
+
+.hero__section .hero__content .hero__data .hero__weather .weather__low--high {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -674,27 +230,312 @@ section {
   margin-top: 1rem;
 }
 
-.details__section .details__content .details__weather .weather__day--night .weather__night .night__text,
-.details__section .details__content .details__weather .weather__day--night .weather__night .day__text,
-.details__section .details__content .details__weather .weather__day--night .weather__day .night__text,
-.details__section .details__content .details__weather .weather__day--night .weather__day .day__text {
+.hero__section .hero__content .hero__data .hero__weather .weather__low--high .weather__low .low__text,
+.hero__section .hero__content .hero__data .hero__weather .weather__low--high .weather__low .high__text,
+.hero__section .hero__content .hero__data .hero__weather .weather__low--high .weather__high .low__text,
+.hero__section .hero__content .hero__data .hero__weather .weather__low--high .weather__high .high__text {
   font-size: 0.813rem;
   font-family: "Comfortaa";
-  font-weight: 700;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
-.details__section .details__content .details__weather .weather__day--night .weather__night .night__degree,
-.details__section .details__content .details__weather .weather__day--night .weather__night .day__degree,
-.details__section .details__content .details__weather .weather__day--night .weather__day .night__degree,
-.details__section .details__content .details__weather .weather__day--night .weather__day .day__degree {
+.hero__section .hero__content .hero__data .hero__weather .weather__low--high .weather__low .low__temp,
+.hero__section .hero__content .hero__data .hero__weather .weather__low--high .weather__low .high__temp,
+.hero__section .hero__content .hero__data .hero__weather .weather__low--high .weather__high .low__temp,
+.hero__section .hero__content .hero__data .hero__weather .weather__low--high .weather__high .high__temp {
   font-size: 0.938rem;
   font-family: "Comfortaa";
   font-weight: 700;
   margin-top: 0.25rem;
 }
 
-.transform-details {
-  bottom: 0;
+.hero__section .hero__content .hero__time--date {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 576px) {
+  .hero__section .hero__content .hero__time--date {
+    margin-top: -2.5rem;
+  }
+}
+
+@media (min-width: 998px) {
+  .hero__section .hero__content .hero__time--date {
+    margin-top: -3rem;
+  }
+}
+
+.hero__section .hero__content .hero__time--date .hero__date .dates,
+.hero__section .hero__content .hero__time--date .hero__date .months,
+.hero__section .hero__content .hero__time--date .hero__date .days {
+  font-weight: 700;
+}
+
+.hero__section .hero__content .hero__time--date .hero__date .months,
+.hero__section .hero__content .hero__time--date .hero__date .days {
+  font-family: "Comfortaa";
+}
+
+.hero__section .hero__content .hero__time--date .hero__date .dates {
+  font-size: 3rem;
+  font-family: "Quicksand";
+}
+
+@media (min-width: 576px) {
+  .hero__section .hero__content .hero__time--date .hero__date .dates {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__section .hero__content .hero__time--date .hero__date .dates {
+    font-size: 4rem;
+  }
+}
+
+.hero__section .hero__content .hero__time--date .hero__date .months {
+  font-size: 0.938rem;
+}
+
+.hero__section .hero__content .hero__time--date .hero__date .days {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.hero__section .hero__content .hero__time--date .time__container .time__greetings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25rem;
+}
+
+.hero__section .hero__content .hero__time--date .time__container .greetings,
+.hero__section .hero__content .hero__time--date .time__container .division {
+  font-size: 0.938rem;
+  font-family: "Glacial Indifference";
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+@media (max-width: 340px) {
+  .hero__section .hero__content .hero__time--date .time__container .greetings,
+  .hero__section .hero__content .hero__time--date .time__container .division {
+    font-size: 0.813rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .hero__section .hero__content .hero__time--date .time__container .greetings,
+  .hero__section .hero__content .hero__time--date .time__container .division {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__section .hero__content .hero__time--date .time__container .greetings,
+  .hero__section .hero__content .hero__time--date .time__container .division {
+    font-size: 1.3rem;
+  }
+}
+
+.hero__section .hero__content .hero__time--date .time__container .division {
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+@media (min-width: 576px) {
+  .hero__section .hero__content .hero__time--date .time__container .division {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__section .hero__content .hero__time--date .time__container .division {
+    font-size: 1.5rem;
+  }
+}
+
+.hero__section .hero__content .hero__time--date .time__container .time__data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 0.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .hero__section .hero__content .hero__time--date .time__container .time__data {
+    margin: 0;
+  }
+}
+
+.hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 0.2rem;
+}
+
+.hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper .hours,
+.hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper .minutes {
+  font-size: 5rem;
+  font-family: "Glacial Indifference";
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+@media (max-width: 340px) {
+  .hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper .hours,
+  .hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper .minutes {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper .hours,
+  .hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper .minutes {
+    font-size: 7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper .hours,
+  .hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper .minutes {
+    font-size: 10rem;
+  }
+}
+
+@media (min-width: 998px) {
+  .hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper .hours,
+  .hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper .minutes {
+    font-size: 12rem;
+  }
+}
+
+.hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper .seconds,
+.hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper .colon {
+  font-size: 3.5rem;
+  font-family: "Glacial Indifference";
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+@media (max-width: 340px) {
+  .hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper .seconds,
+  .hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper .colon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper .seconds,
+  .hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper .colon {
+    font-size: 4.5rem;
+    margin-bottom: 0.7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper .seconds,
+  .hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper .colon {
+    font-size: 6rem;
+    margin-bottom: 0.9rem;
+  }
+}
+
+@media (min-width: 998px) {
+  .hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper .seconds,
+  .hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper .colon {
+    font-size: 8rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper .seconds {
+  width: 5.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 340px) {
+  .hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper .seconds {
+    width: 4.0625rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper .seconds {
+    width: 7.1875rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper .seconds {
+    width: 8.4375rem;
+  }
+}
+
+@media (min-width: 998px) {
+  .hero__section .hero__content .hero__time--date .time__container .time__data .time__wrapper .seconds {
+    width: 10.625rem;
+  }
+}
+
+.hero__section .hero__content .hero__time--date .time__container .time__data .ampm {
+  font-size: 1.5rem;
+  font-family: "Anurati";
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 340px) {
+  .hero__section .hero__content .hero__time--date .time__container .time__data .ampm {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .hero__section .hero__content .hero__time--date .time__container .time__data .ampm {
+    font-size: 2rem;
+    margin-bottom: 1.4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__section .hero__content .hero__time--date .time__container .time__data .ampm {
+    font-size: 2.5rem;
+    margin-bottom: 1.7rem;
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 998px) {
+  .hero__section .hero__content .hero__time--date .time__container .time__data .ampm {
+    font-size: 3rem;
+    margin-bottom: 2.3rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

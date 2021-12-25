@@ -34,37 +34,3 @@ main {
 section {
   padding: 2rem 0;
 }
-.weather__container {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: $x-0-5;
-  .weather__icon {
-    width: 80px;
-  }
-  .weather__temperature {
-    display: flex;
-    cursor: pointer;
-    .temperature,
-    .degree,
-    .fahrenheit {
-      font-size: $biggest-font;
-      font-family: $Comfortaa;
-    }
-    .fahrenheit {
-      margin-left: $x-0-75;
-    }
-  }
-}
-.weather__location,
-.weather__mood,
-.weather__feels--like {
-  font-family: $Comfortaa;
-  font-size: $small-font;
-  opacity: 0.8;
-}
-.weather__mood {
-  font-size: $normal-font;
-  opacity: 1;
-  margin: $x-0-25 0;
-}

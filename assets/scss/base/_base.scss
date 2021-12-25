@@ -6,36 +6,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-html {
-  scroll-behavior: smooth;
-}
 body {
   margin: 0;
   padding: 0;
   color: $white-color;
-  overflow: hidden;
-}
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-a {
-  text-decoration: none;
 }
 span {
   display: block;
-}
-button {
-  border: none;
-  outline: none;
-  font-family: $Comfortaa;
-  font-weight: $bold;
-  font-size: $normal-font;
-  cursor: pointer;
-}
-i {
-  font-size: 1.3rem;
 }
 img {
   max-width: 100%;

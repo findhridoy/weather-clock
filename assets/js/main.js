@@ -1,10 +1,9 @@
 // DOM Selectors
-const heroSection = document.querySelector(".hero__section");
-const detailsSection = document.querySelector(".details__section");
-const arrowButton = document.querySelector(".arrow__wrapper");
-const arrowButtonText = document.querySelector(".arrow__button--text");
 const quotes = document.querySelector(".quotes");
 const quotesAuthor = document.querySelector(".quotes__author");
+const dates = document.querySelector(".dates");
+const months = document.querySelector(".months");
+const days = document.querySelector(".days");
 const greetings = document.querySelector(".greetings");
 const hours = document.querySelector(".hours");
 const minutes = document.querySelector(".minutes");
@@ -15,22 +14,13 @@ const division = document.querySelector(".division");
 const weatherTemp = document.querySelector(".weather__temperature");
 const temp = document.querySelector(".temperature");
 const fahrenheit = document.querySelector(".fahrenheit");
-const weatherTimezone = document.querySelector(".weather__location");
-const weatherSummery = document.querySelector(".weather__mood");
+const weatherTimezone = document.querySelector(".weather__timezone");
+const weatherSummery = document.querySelector(".weather__summery");
 const weatherFeels = document.querySelector(".weather__feels--like");
+const weatherLowTemp = document.querySelector(".low__temp");
+const weatherHighTemp = document.querySelector(".high__temp");
 const weatherIcon = document.querySelector(".weather__icon");
-
-// Expand bottom section and button text change
-arrowButton.addEventListener("click", () => {
-  heroSection.classList.toggle("transform-hero");
-  detailsSection.classList.toggle("transform-details");
-  arrowButton.classList.toggle("active--button");
-  if (arrowButtonText.innerText === "More") {
-    arrowButtonText.innerText = "Less";
-  } else if (arrowButtonText.innerText === "Less") {
-    arrowButtonText.innerText = "More";
-  }
-});
+const timeGreetingsIcon = document.querySelector(".time__greetings--icon");
 
 // Request Quotes API show data
 const getQoutes = async () => {
@@ -44,7 +34,43 @@ const getQoutes = async () => {
   }
 };
 
-// Clock Real Time
+// Set Dates
+const setDate = () => {
+  const weekday = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  const monthName = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  let date = new Date().getDate();
+  let month = new Date().getMonth();
+  let day = new Date().getDay();
+
+  dates.innerText = date;
+  months.innerText = monthName[month];
+  days.innerText = "Today's " + weekday[day];
+};
+
+// Set Clock Time
 const getTime = () => {
   let h = new Date().getHours();
   let m = new Date().getMinutes();
@@ -82,7 +108,7 @@ const getTime = () => {
     s = "0" + s;
   }
   minutes.innerText = ":" + m;
-  seconds.innerText = ":" + s;
+  seconds.innerText = s;
 };
 
 // Current Timezone and longitude, latitude
@@ -111,8 +137,10 @@ const getWeather = async (lat, long) => {
     const { data } = await axios.get(
       `${proxy}https://api.darksky.net/forecast/fd9d9c6418c23d94745b836767721ad1/${lat},${long}`
     );
-    console.log(data);
+
     const { summary, temperature, icon } = data.currently;
+    const { temperatureHigh, temperatureLow } = data.daily.data[0];
+
     temp.innerText = Math.floor(temperature);
 
     //Fahrenheit to Celcias Forumula
@@ -132,7 +160,10 @@ const getWeather = async (lat, long) => {
     weatherTimezone.innerText = data.timezone;
     weatherSummery.innerText = summary;
     weatherFeels.innerText = `Feels Like ${celcias}° C`;
+    weatherLowTemp.innerText = Math.floor(temperatureLow) + "° F";
+    weatherHighTemp.innerText = Math.floor(temperatureHigh) + "° F";
     setIcons(icon, weatherIcon);
+    setIcons(icon, timeGreetingsIcon);
   } catch (error) {
     console.log(error);
   }
@@ -148,7 +179,5 @@ const setIcons = (icon, iconId) => {
 
 getQoutes();
 getTimezone();
+setDate();
 setInterval(getTime, 1000);
-
-// https://api.darksky.net/forecast/fd9d9c6418c23d94745b836767721ad1
-// https://api.darksky.net/forecast/fd9d9c6418c23d94745b836767721ad1/23.8021,90.6397

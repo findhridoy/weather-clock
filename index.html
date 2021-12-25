@@ -23,47 +23,59 @@
                 </p>
                 <span class="quotes__author">Nargis Fakhri</span>
               </div>
+
               <div class="hero__weather">
                 <div class="weather__container">
-                  <!-- <img
-                    src="assets/images/partly_cloudy_day.png"
-                    alt="weather icon"
-                    class="weather__icon"
-                  /> -->
-                  <canvas
-                    class="weather__icon"
-                    width="128"
-                    height="128"
-                  ></canvas>
-
+                  <canvas class="weather__icon" width="70" height="70"></canvas>
                   <span class="weather__temperature">
-                    <span class="temperature">26</span>
-                    <span class="degree">&deg</span>
+                    <span class="temperature"></span>
+                    <span class="degree">&deg;</span>
                     <span class="fahrenheit">F</span>
                   </span>
                 </div>
-                <span class="weather__location">Dhaka</span>
-                <span class="weather__mood">Partly Cloudy</span>
-                <span class="weather__feels--like">Feels Like 27°C</span>
+                <span class="weather__timezone"></span>
+                <span class="weather__summery"></span>
+                <span class="weather__feels--like"></span>
+                <div class="weather__low--high">
+                  <div class="weather__low">
+                    <span class="low__text">Low Temp.</span>
+                    <span class="low__temp"></span>
+                  </div>
+                  <div class="weather__high">
+                    <span class="high__text">High Temp.</span>
+                    <span class="high__temp"></span>
+                  </div>
+                </div>
               </div>
             </div>
             <!-- Hero Time -->
-            <div class="hero__time">
-              <div class="time__container">
-                <span class="greetings"></span>
-                <div class="time__data">
-                  <span class="hours">12</span>
-                  <span class="minutes">:44</span>
-                  <span class="seconds">:13</span>
-                  <span class="ampm">pm</span>
-                </div>
-                <span class="division">In Dhaka Division, BD</span>
+            <div class="hero__time--date">
+              <div class="hero__date">
+                <span class="dates"></span>
+                <span class="months"></span>
+                <span class="days"></span>
               </div>
-              <div class="hero__arrow--button">
-                <div class="arrow__wrapper">
-                  <span class="arrow__button--text">More</span>
-                  <!-- <div class="arrow__button"></div> -->
+
+              <div class="time__container">
+                <div class="time__greetings">
+                  <canvas
+                    class="time__greetings--icon"
+                    width="20"
+                    height="20"
+                  ></canvas>
+                  <span class="greetings"></span>
                 </div>
+
+                <div class="time__data">
+                  <div class="time__wrapper">
+                    <span class="hours"></span>
+                    <span class="minutes"></span>
+                    <span class="colon">:</span>
+                    <span class="seconds"></span>
+                  </div>
+                  <span class="ampm"></span>
+                </div>
+                <span class="division"></span>
               </div>
             </div>
           </div>
@@ -71,52 +83,12 @@
       </section>
       <!-- Hero Section End -->
 
-      <!-- Details Section Start -->
-      <section class="details__section transform">
-        <div class="container">
-          <div class="details__content">
-            <div class="details__data">
-              <span class="details__date">26</span>
-              <span class="details__month">January</span>
-              <span class="details__day">Today's Sunday</span>
-              <span class="details__timezone">Current Timezone</span>
-              <span class="details__timezone--text">Asia/Dhaka</span>
-            </div>
-            <div class="details__weather">
-              <div class="details__weather--container weather__container">
-                <img
-                  src="assets/images/partly_cloudy_day.png"
-                  alt="weather icon"
-                  class="weather__icon"
-                />
-
-                <span class="weather__degree">26°C</span>
-              </div>
-              <span class="weather__location">Dhaka</span>
-              <span class="weather__mood">Partly Cloudy</span>
-              <span class="weather__feels--like">Feels Like 27°C</span>
-              <div class="weather__day--night">
-                <div class="weather__night">
-                  <span class="night__text">Night Temp.</span>
-                  <span class="night__degree">-26°C</span>
-                </div>
-                <div class="weather__day">
-                  <span class="day__text">Night Temp.</span>
-                  <span class="day__degree">-26°C</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Details Section End -->
       <img src="" alt="BG Image" class="main__bg" />
     </main>
 
     <!-- JS File -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="assets/js/skycons.js"></script>
-    <script src="assets/js/requestAPI.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>
