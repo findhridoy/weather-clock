@@ -80,13 +80,13 @@ const getTime = () => {
   let greet = "";
   if (h >= 5 && h <= 11) {
     greet = "Morning";
-    mainBGImage.src = "../../assets/images/morning.jpg";
+    mainBGImage.src = "assets/images/morning.jpg";
   } else if (h >= 12 && h <= 17) {
     greet = "Afternoon";
-    mainBGImage.src = "../../assets/images/noon.jpg";
+    mainBGImage.src = "assets/images/noon.jpg";
   } else {
     greet = "Evening";
-    mainBGImage.src = "../../assets/images/evening.jpg";
+    mainBGImage.src = "assets/images/evening.jpg";
   }
   greetings.innerText = `Good ${greet}, It's Currently`;
 
