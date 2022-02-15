@@ -133,7 +133,7 @@ const getTimezone = async () => {
 // Get Weather data
 const getWeather = async (lat, long) => {
   try {
-    const proxy = "https://cors-proxy.tk/?url=";
+    const proxy = "https://cors-anywhere.herokuapp.com/";
     const { data } = await axios.get(
       `${proxy}https://api.darksky.net/forecast/fd9d9c6418c23d94745b836767721ad1/${lat},${long}`
     );
